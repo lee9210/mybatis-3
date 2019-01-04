@@ -42,9 +42,9 @@ public class DefaultObjectFactoryTest {
   public void createClass() throws Exception {
     DefaultObjectFactory defaultObjectFactory = new DefaultObjectFactory();
     TestClass testClass = defaultObjectFactory.create(TestClass.class,
-        Arrays.<Class<?>>asList(String.class, Integer.class), Arrays.<Object>asList("foo", 0));
+        Arrays.<Class<?>>asList(String.class, Integer.class), Arrays.<Object>asList("foo", 1));
 
-    Assert.assertEquals("myInteger didn't match expected", (Integer) 0, testClass.myInteger);
+    Assert.assertEquals("myInteger didn't match expected", (Integer) 1, testClass.myInteger);
     Assert.assertEquals("myString didn't match expected", "foo", testClass.myString);
   }
 
